@@ -1,0 +1,104 @@
+﻿@using System.Collections.Generic;
+@model List<FormsPrint.Models.PrintModel>
+
+<html lang="en">
+<head>
+	<!-- iOS - needs to reside in the "Resources" directory and have build action of "BundleResource" -->
+	<!-- Droid - needs to reside in "Assets" directory and have build action of "AndroidAsset" -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
+	<link rel="stylesheet" href="primer.css">
+	<style>
+		.content {
+			max-width: 100%;
+			margin: auto;
+		}
+		table, th, td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="blankslate blankslate-spacious">
+			<h3>Xamarin Forms EZ-Print!</h3>
+			<p>Even works using the CSS frameworks like Primer!</p>
+		</div>
+		<div class="table">
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th scope="col">ModelName</th>
+						<th scope="col">ModelDescription</th>
+						<th scope="col">ModelDescription1</th>
+						<th scope="col">ModelDescription2</th>
+						<th scope="col">ModelDescription3</th>
+						<th scope="col">ModelDescription4</th>
+						<th scope="col">ModelDescription5</th>
+						<th scope="col">ModelDescription6</th>
+						<th scope="col">ModelDescription7</th>
+						<th scope="col">ModelDescription8</th>
+						<th scope="col">ModelDescription10</th>
+						<th scope="col">ModelDescription11</th>
+						<th scope="col">ModelDescription12</th>
+						<th scope="col">ModelDescription13</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>
+								@item.ModelName
+							</td>
+							<td>
+								@item.ModelDescription
+							</td>
+							<td>
+								@item.ModelDescription1
+							</td>
+							<td>
+								@item.ModelDescription2
+							</td>
+							<td>
+								@item.ModelDescription3
+							</td>
+							<td>
+								@item.ModelDescription4
+							</td>
+							<td>
+								@item.ModelDescription5
+							</td>
+							<td>
+								@item.ModelDescription6
+							</td>
+							<td>
+								@item.ModelDescription7
+							</td>
+							<td>
+								@item.ModelDescription8
+							</td>
+							<td>
+								@item.ModelDescription9
+							</td>
+							<td>
+								@item.ModelDescription10
+							</td>
+							<td>
+								@item.ModelDescription11
+							</td>
+							<td>
+								@item.ModelDescription12
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
