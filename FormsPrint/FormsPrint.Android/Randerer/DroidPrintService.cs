@@ -13,6 +13,11 @@ namespace FormsPrint.Droid.Randerer
 		{
 		}
 
+		public string Get()
+		{
+			return "file:///android_asset/primer.css";
+		}
+
 		public void Print(WebView viewToPrint)
 		{
 			var droidViewToPrint = Platform.CreateRenderer(viewToPrint).ViewGroup.GetChildAt(0) as Android.Webkit.WebView;

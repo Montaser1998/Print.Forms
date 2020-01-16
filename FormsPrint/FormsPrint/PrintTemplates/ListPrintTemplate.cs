@@ -21,6 +21,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+#line 2 "ListPrintTemplate.cshtml"
+using Xamarin.Forms;
+
+#line default
+#line hidden
+
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "16.4.0.308")]
 public partial class ListPrintTemplate : ListPrintTemplateBase
@@ -28,7 +34,7 @@ public partial class ListPrintTemplate : ListPrintTemplateBase
 
 #line hidden
 
-#line 2 "ListPrintTemplate.cshtml"
+#line 3 "ListPrintTemplate.cshtml"
 public List<FormsPrint.Models.PrintModel> Model { get; set; }
 
 #line default
@@ -53,34 +59,81 @@ WriteLiteral(" name=\"viewport\"");
 
 WriteLiteral(" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"");
 
-WriteLiteral(">\r\n\r\n\t<!-- Bootstrap CSS -->\r\n\t");
-
-WriteLiteral("\r\n\t<link");
+WriteLiteral(">\r\n\r\n\t<!-- Bootstrap CSS -->\r\n\t<link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteLiteral(" href=\"primer.css\"");
+WriteLiteral(" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\"");
 
-WriteLiteral(">\r\n\t<style>\r\n\t\t.content {\r\n\t\t\tmax-width: 100%;\r\n\t\t\tmargin: auto;\r\n\t\t}\r\n\t\ttable, t" +
-"h, td {\r\n\t\t  border: 1px solid black;\r\n\t\t  border-collapse: collapse;\r\n\t\t}\r\n\t</s" +
-"tyle>\r\n</head>\r\n<body>\r\n\t<div");
+WriteLiteral(" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J" +
+"Xm\"");
 
-WriteLiteral(" class=\"content\"");
+WriteLiteral(" crossorigin=\"anonymous\"");
 
-WriteLiteral(">\r\n\t\t<div");
+WriteLiteral(">\r\n\t<link");
 
-WriteLiteral(" class=\"blankslate blankslate-spacious\"");
+WriteLiteral(" rel=\"stylesheet\"");
 
-WriteLiteral(">\r\n\t\t\t<h3>Xamarin Forms EZ-Print!</h3>\r\n\t\t\t<p>Even works using the CSS frameworks" +
-" like Primer!</p>\r\n\t\t</div>\r\n\t\t<div");
+WriteAttribute ("href", " href=\"", "\""
 
-WriteLiteral(" class=\"table\"");
+#line 14 "ListPrintTemplate.cshtml"
+, Tuple.Create<string,object,bool> ("", DependencyService.Get<FormsPrint.IPrintService>().Get()
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(@">
+	<style>
+		div {
+			-webkit-user-select: none; /* Safari 3.1+ */
+			-moz-user-select: none; /* Firefox 2+ */
+			-ms-user-select: none; /* IE 10+ */
+			user-select: none; /* Standard syntax */
+			cursor: default;
+		}
+	</style>
+</head>
+<body>
+
+	<div");
+
+WriteLiteral(" class=\"container-fluid\"");
+
+WriteLiteral(">\r\n\t\t<br />\r\n\t\t<div");
+
+WriteLiteral(" class=\"border border-dashed p-2\"");
+
+WriteLiteral(">\r\n\t\t\t<h3");
+
+WriteLiteral(" class=\"text-gray-dark\"");
+
+WriteLiteral(" style=\"user-select:none;\"");
+
+WriteLiteral(">\r\n\t\t\t\tXamarin Forms Print!\r\n\t\t\t</h3>\r\n\t\t\t<p");
+
+WriteLiteral(" class=\"text-gray\"");
+
+WriteLiteral("  style=\"user-select:none;\"");
+
+WriteLiteral(">\r\n\t\t\t\tEven works using the CSS frameworks like Primer!\r\n\t\t\t</p>\r\n\t\t</div>\r\n\t\t<br" +
+" />\r\n\r\n\t\t<div");
+
+WriteLiteral(" class=\"table-responsive\"");
 
 WriteLiteral(">\r\n\t\t\t<table");
 
-WriteLiteral(" class=\"table table-sm\"");
+WriteLiteral(" class=\"table table-bordered table-sm\"");
 
-WriteLiteral(">\r\n\t\t\t\t<thead>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<th");
+WriteLiteral(">\r\n\t\t\t\t<thead");
+
+WriteLiteral(" class=\"thead-light\"");
+
+WriteLiteral(">\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<th");
+
+WriteLiteral(" scope=\"col\"");
+
+WriteLiteral(">#</th>\r\n\t\t\t\t\t\t<th");
 
 WriteLiteral(" scope=\"col\"");
 
@@ -139,13 +192,13 @@ WriteLiteral(" scope=\"col\"");
 WriteLiteral(">ModelDescription13</th>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody>\r\n");
 
 
-#line 52 "ListPrintTemplate.cshtml"
+#line 61 "ListPrintTemplate.cshtml"
 					
 
 #line default
 #line hidden
 
-#line 52 "ListPrintTemplate.cshtml"
+#line 61 "ListPrintTemplate.cshtml"
                      foreach (var item in Model)
 					{
 
@@ -157,41 +210,8 @@ WriteLiteral("\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td>\r\n");
 WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
-#line 56 "ListPrintTemplate.cshtml"
-                           Write(item.ModelName);
-
-
-#line default
-#line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
-
-WriteLiteral("\t\t\t\t\t\t\t\t");
-
-
-#line 59 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription);
-
-
-#line default
-#line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
-
-WriteLiteral("\t\t\t\t\t\t\t\t");
-
-
-#line 62 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription1);
-
-
-#line default
-#line hidden
-WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
-
-WriteLiteral("\t\t\t\t\t\t\t\t");
-
-
 #line 65 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription2);
+                            Write(Model.IndexOf(item) + 1);
 
 
 #line default
@@ -202,7 +222,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 68 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription3);
+                           Write(item.ModelName);
 
 
 #line default
@@ -213,7 +233,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 71 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription4);
+                           Write(item.ModelDescription);
 
 
 #line default
@@ -224,7 +244,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 74 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription5);
+                           Write(item.ModelDescription1);
 
 
 #line default
@@ -235,7 +255,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 77 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription6);
+                           Write(item.ModelDescription2);
 
 
 #line default
@@ -246,7 +266,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 80 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription7);
+                           Write(item.ModelDescription3);
 
 
 #line default
@@ -257,7 +277,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 83 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription8);
+                           Write(item.ModelDescription4);
 
 
 #line default
@@ -268,7 +288,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 86 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription9);
+                           Write(item.ModelDescription5);
 
 
 #line default
@@ -279,7 +299,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 89 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription10);
+                           Write(item.ModelDescription6);
 
 
 #line default
@@ -290,7 +310,7 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 92 "ListPrintTemplate.cshtml"
-                           Write(item.ModelDescription11);
+                           Write(item.ModelDescription7);
 
 
 #line default
@@ -301,6 +321,50 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 
 
 #line 95 "ListPrintTemplate.cshtml"
+                           Write(item.ModelDescription8);
+
+
+#line default
+#line hidden
+WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
+
+WriteLiteral("\t\t\t\t\t\t\t\t");
+
+
+#line 98 "ListPrintTemplate.cshtml"
+                           Write(item.ModelDescription9);
+
+
+#line default
+#line hidden
+WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
+
+WriteLiteral("\t\t\t\t\t\t\t\t");
+
+
+#line 101 "ListPrintTemplate.cshtml"
+                           Write(item.ModelDescription10);
+
+
+#line default
+#line hidden
+WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
+
+WriteLiteral("\t\t\t\t\t\t\t\t");
+
+
+#line 104 "ListPrintTemplate.cshtml"
+                           Write(item.ModelDescription11);
+
+
+#line default
+#line hidden
+WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td>\r\n");
+
+WriteLiteral("\t\t\t\t\t\t\t\t");
+
+
+#line 107 "ListPrintTemplate.cshtml"
                            Write(item.ModelDescription12);
 
 
@@ -309,13 +373,13 @@ WriteLiteral("\t\t\t\t\t\t\t\t");
 WriteLiteral("\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t</tr>\r\n");
 
 
-#line 98 "ListPrintTemplate.cshtml"
+#line 110 "ListPrintTemplate.cshtml"
 					}
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n\t</div>\r\n</body>\r\n</html>\r\n");
+WriteLiteral("\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n\t</div>\r\n</body>\r\n</html>");
 
 }
 }

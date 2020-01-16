@@ -17,6 +17,11 @@ namespace FormsPrint.iOS.Randerer
 		{
 		}
 
+		public string Get()
+		{
+			return NSBundle.MainBundle.BundlePath + "primer.css";
+		}
+
 		public void Print(WebView viewToPrint)
 		{
 			var appleViewToPrint = Platform.CreateRenderer(viewToPrint).NativeView;

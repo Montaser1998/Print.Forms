@@ -24,6 +24,11 @@ namespace FormsPrint.UWP.Randerer
 			return PrintManager.IsSupported();
 		}
 
+		public string Get()
+		{
+			return "ms-appx-web:///Assets/primer.css";
+		}
+
 		public void Print(Xamarin.Forms.WebView webView)
 		{
 			Device.BeginInvokeOnMainThread(async () =>

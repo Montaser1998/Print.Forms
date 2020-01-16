@@ -8,5 +8,6 @@ namespace FormsPrint
 	public interface IPrintService
 	{
 		void Print(WebView viewToPrint);
+		string Get();
 	}
 }
